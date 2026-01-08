@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 60px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60%;
+            background: #87ceeb;
+        }
+
+        .avatar-head {
+            position: absolute;
+            bottom: 30px;
+            width: 50px;
+            height: 50px;
+            background: #fdbcb4;
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .avatar-body {
+            position: absolute;
+            bottom: 0;
+            width: 80px;
+            height: 50px;
+            background: #4a90e2;
+            border-radius: 40px 40px 0 0;
+            z-index: 1;
+        }
+
+        .avatar-eye {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #333;
+            border-radius: 50%;
+            top: 18px;
+        }
+
+        .avatar-eye.left {
+            left: 15px;
+        }
+
+        .avatar-eye.right {
+            right: 15px;
+        }
+
+        .avatar-mouth {
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 10px;
+            border: 2px solid #333;
+            border-top: none;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 24px;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .info-item {
+            padding: 10px 0;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            color: #333;
+        }
+
+        .accomplishment {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .accomplishment h3 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .accomplishment p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .accomplishment .year {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: #667eea;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="profile-img">
+                <div class="avatar-head">
+                    <div class="avatar-eye left"></div>
+                    <div class="avatar-eye right"></div>
+                    <div class="avatar-mouth"></div>
+                </div>
+                <div class="avatar-body"></div>
+            </div>
+            <h1>Prince Darille Ombay</h1>
+            <p>Web Developer & Designer</p>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>Personal Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Email:</div>
+                        <div class="info-value">oprincedarille@email.com</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Phone:</div>
+                        <div class="info-value">09550577127</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Location:</div>
+                        <div class="info-value">Sebaca Rizal Z,N</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Website:</div>
+                        <div class="info-value">www.princedarille.dev</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>About Me</h2>
+                <p style="color: #666; line-height: 1.8;">
+                    Passionate web developer with 5 years of experience in creating responsive and user-friendly websites. 
+                    I specialize in front-end development with a keen eye for design and a commitment to writing clean, 
+                    efficient code. Always eager to learn new technologies and tackle challenging projects.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Skills</h2>
+                <div class="skills">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Responsive Design</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">UI/UX Design</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Accomplishments</h2>
+                
+                <div class="accomplishment">
+                    <span class="year">2024</span>
+                    <h3>Best Web Developer Award</h3>
+                    <p>Received recognition for outstanding contribution to web development projects at TechCorp Inc.</p>
+                </div>
+
+                <div class="accomplishment">
+                    <span class="year">2023</span>
+                    <h3>Launched E-Commerce Platform</h3>
+                    <p>Successfully developed and launched a full-featured e-commerce platform serving over 10,000 users monthly.</p>
+                </div>
+
+                <div class="accomplishment">
+                    <span class="year">2022</span>
+                    <h3>Certified React Developer</h3>
+                    <p>Earned advanced certification in React development from Meta Professional Certificate program.</p>
+                </div>
+
+                <div class="accomplishment">
+                    <span class="year">2021</span>
+                    <h3>Open Source Contributor</h3>
+                    <p>Contributed to major open-source projects with over 500 commits and helped improve documentation for new developers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
